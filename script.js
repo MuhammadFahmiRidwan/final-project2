@@ -1,3 +1,4 @@
+// membuat pilihan komputer
 function getPilihanComputer() {
     const comp = Math.random()
     if( comp < 0.34 ) return 'batu'
@@ -5,6 +6,7 @@ function getPilihanComputer() {
     return 'kertas'
 }
 
+//  menentukan rules
 function getHasil(comp, player) {
     if( player == comp ) return 'SERI!'
     if( player == 'batu' ) return ( comp == 'gunting' ) ? 'MENANG!' : 'KALAH!'
@@ -12,6 +14,7 @@ function getHasil(comp, player) {
     if( player == 'kertas' ) return ( comp == 'gunting' ) ? 'KALAH!' : 'MENANG!' 
 }
 
+// event pilihan player
 const pBatu = document.querySelector('.batu')
 pBatu.addEventListener('click', function(){
     const pilihanComputer = getPilihanComputer()
